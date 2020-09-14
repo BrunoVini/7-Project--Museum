@@ -1,0 +1,224 @@
+body, html {
+	overflow-x: hidden;
+}
+
+body {
+	background: #f4f2ec url(../Imagens/fundo.png) repeat-x;
+	font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, sans-serif;
+}
+
+#container {
+	max-width: 1080px;
+	margin: 0 auto;
+}
+
+@keyframes pagina{
+	from {
+		position: relative; background: #c1c1c1;
+		top: 40px;
+	}
+	to {
+		position: relative;
+		top: 0px;
+	}
+}
+
+a:link, a:active, a:visited {
+	text-decoration: none;
+	color: #af670a;
+}
+
+a:hover {
+	color: #227115;
+}
+
+h3 {
+	color: #227115;
+	text-transform: uppercase;
+	font-size: 1em;
+	margin-left: 10px; 
+	text-shadow: 5px 0.5px 10px black;
+}
+
+h4 {
+	color: #86521a;
+	text-transform: uppercase;
+}
+
+/* TOPO */
+
+header{
+	padding: 10px;
+}
+
+div#logo {
+	margin-top: 20px;
+	float: left;
+}
+
+/* ***************************** */
+
+nav>ul {
+	list-style: none;
+	float: right;
+}
+
+nav li {
+	display: inline-block;
+	margin-right: 25px;
+}
+
+nav a:hover {
+	border-bottom: 1px solid #535858;
+}
+
+/* ***** CONTEUDO ***** */
+
+article {
+	width: 100%; 
+	margin-top: 60px;
+	padding-bottom: 100px;  animation: pagina 2s 0s 1;
+}
+
+section {
+	width: 65%; 
+	float: left;
+}
+
+.flex {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.item {
+	width: 315px;
+	height: 220px;
+	margin-bottom: 20px;
+}
+
+a.link {
+	font-weight: bold;
+}
+
+aside {
+	width: 33%;
+	float: right;
+	background: #ebe7dd;
+}
+
+#ajustor {
+	margin: 10px;
+	clear: both;
+}
+
+/* ***** FORMULARIO ***** */
+
+.form {
+	background: #cdc8b1;
+	padding: 10px 27px 27px 27px;
+	margin-top: 10px;
+	width: 300px;
+}
+
+input {
+	height: 20px;
+	width: 80px;
+	background: #fff;
+	border: none;
+	font-size: 1em;
+}
+
+input.botao {
+	width: 95%;
+	height: 40px;
+	color: #fff;
+	background: #9b9271;
+	font-size: 1.2em;
+}
+
+input.botao:hover {
+	cursor: pointer;
+	border: 1px solid blue;
+}
+
+fieldset {
+	border: none;
+}
+
+legend {
+	display: none;
+}
+
+/* ***** FOTOS ***** */
+
+section.imagens {
+	width: 355px;
+	padding-bottom: 30px;
+}
+
+section.imagens h4 {
+	margin-left: 30px;
+}
+
+div.flex1 {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+section.imagens a.foto {
+	margin:  20px 20px -10px 20px;
+	padding: 20px;
+	background: url(../Imagens/fundo-foto.png) no-repeat;
+}
+
+/* ***** RODAPE ***** */
+
+footer {
+	clear: both;
+	text-align: center;
+	padding: 20px;
+	background: url(../Imagens/fundo-rodape.png) no-repeat top center;
+}
+
+footer a {
+	margin: 0px 10px;
+}
+
+@media (max-width:550px){
+	section:nth-child(1) div.flex{
+		position: relative;
+		left: -10%;
+	}
+}
+
+@media (max-width:850px){
+	section{
+		width: 100%;
+		margin: 0;
+	}
+	section:nth-child(1) div.flex{
+		position: relative;
+		left: 0;
+	}
+	aside{
+		width: 100%;
+		margin: 0;
+	}aside img:nth-child(1){
+		width: 90%;
+		max-width: 400px;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}aside section.form{
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+		margin-right: 100%;
+	}
+	aside section.imagens{
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
